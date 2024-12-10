@@ -5,7 +5,7 @@ import Button from '../../atoms/Button';
 const Resume = () => {
   const btnDownloadOnclick = (e) => {
     window.open(
-      'https://drive.google.com/file/d/1nly11vUlglEcYtCylyZuKwHac-tR92CI/view?usp=sharing',
+      'https://drive.google.com/file/d/172zlhEntgQN2KoZcIfAH4l4CLvgj3ylR/view?usp=sharing',
       '_blank'
     );
   };
@@ -17,12 +17,11 @@ const Resume = () => {
         </div>
         <div className='mt-4 flex justify-between items-center'>
           <div className='flex items-center pb-4'>
-            <div className='text-gray-600 bg-gray-200 px-2 py-2 h-fit rounded-md mr-4'>
+            <div onClick={btnDownloadOnclick} className='text-gray-600 bg-gray-200 px-2 py-2 h-fit rounded-md mr-4 hover:cursor-pointer hover:bg-gray-300'>
               <HiOutlineDocumentText />
             </div>
-            <p className='text-sm'>cv_ariprayoga.pdf</p>
+            <p className='text-sm hover:cursor-pointer hover:text-blue-600' onClick={btnDownloadOnclick}>cv_ariprayoga.pdf</p>
           </div>
-          <Button type='download' onClick={btnDownloadOnclick} />
         </div>
       </div>
     </div>

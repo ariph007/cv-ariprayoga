@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { BsLinkedin, BsGithub, BsYoutube } from 'react-icons/bs';
 import { SiMinutemailer } from 'react-icons/si';
 import { AiOutlineEdit, AiOutlineDownload } from 'react-icons/ai';
 import { IoAddSharp } from 'react-icons/io5';
@@ -21,10 +21,22 @@ const Button = ({ title, type, onClick }) => {
     return (
       <button
         onClick={onClick}
-        className='flex items-center px-4 py-1 bg-slate-900 text-slate-100 font-medium rounded-sm hover:bg-slate-600'
+        className='flex items-center px-6 py-1 bg-slate-900 text-slate-100 font-medium rounded-sm hover:bg-slate-600'
       >
         <span className='mr-2'>
           <BsGithub />
+        </span>
+        {title}
+      </button>
+    );
+  }else if (type === 'youtube') {
+    return (
+      <button
+        onClick={onClick}
+        className='flex items-center px-4 py-1 bg-red-600 text-slate-100 font-medium rounded-sm hover:bg-slate-600'
+      >
+        <span className='mr-2'>
+          <BsYoutube />
         </span>
         {title}
       </button>

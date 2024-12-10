@@ -44,10 +44,18 @@ const Portfolio = () => {
               src={img(item.imgUrl)}
               className='max-h-[400px] max-w-[400px] px-4'
             />
-            <div className='flex flex-col px-2 whitespace-normal scale-95'>
+            <div className='flex flex-col px-2 whitespace-normal scale-95 w-full'>
               <p className='text-slate-900 text-sm font-medium'>{item.name}</p>
               <p className='text-xs font-normal'>{item.description}</p>
             </div>
+            {
+              item.tools && (
+                <div className="flex flex-col px-2 whitespace-normal scale-95 mt-2 w-full">
+                <p className='text-xs font-semibold'>Tools:</p>
+              <p className='text-xs font-normal'>{item.tools}</p>
+            </div>
+              )
+            }
           </div>
         ))}
       </div>
