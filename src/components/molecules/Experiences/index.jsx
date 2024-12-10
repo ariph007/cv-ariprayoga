@@ -20,7 +20,6 @@ const Experiences = () => {
       <div className='mt-4'>
         <div className='flex justify-between'>
           <p className='font-medium text-slate-900'>Experience</p>
-          <Button type='add' title='Add' onClick={experienceAdd} />
         </div>
         <div className='mt-4 flex flex-col justify-between items-center'>
           {experiences.map((item) => (
